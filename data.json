@@ -1,0 +1,23 @@
+{
+  "title": "Software",
+  "startDate": "2021-02-04 11:00",
+  "finishDate": "2021-02-04 13:00",
+  "questions": [
+    {
+      "number": 1,
+      "point": 50,
+      "content": "How are you today?",
+      "correctChoice": 1,
+      "choices": [
+        {
+          "number": 1,
+          "content": "Fine!"
+        },
+        {
+          "number": 2,
+          "content": "Not Bad!"
+        }
+      ]
+    }
+  ]
+}
