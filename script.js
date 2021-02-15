@@ -1,4 +1,6 @@
 const questionChoices = {};
+const questionAnswers = {};
+const examInfo = {};
 
 function addChoice(questionID) {
   if (!questionChoices.hasOwnProperty(questionID))
@@ -67,5 +69,13 @@ function getRandomInt(max) {
 }
 
 function postExam(){
+  fetch( 'url',{
+    method:'POST',
+    body: JSON.stringify(exam_info),
+    headers: {"Content-type": "application/json; charset=UTF-8"} 
+  })
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.log(err));
 
 }
