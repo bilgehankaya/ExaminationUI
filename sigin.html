@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    		<div class="container mt-4">
+
+			<form:form action="${pageContext.request.contextPath}/authenticateTheUser" method="POST" class="col-lg-6 offset-lg-3" >
+	    		<div class="form-group">
+			        <div class="col-xs-15">
+			            <div>	
+	           				<c:if test="${param.error != null}">
+								<div class="alert alert-danger col-xs-offset-1 col-xs-10">
+									Incorrect username or password.
+								</div>
+							</c:if>
+							<c:if test="${param.logout != null}">        
+								<div class="alert alert-success col-xs-offset-1 col-xs-10">
+									You have been logged out.
+								</div>
+					   		</c:if>  
+			            </div>
+			        </div>
+			    </div>
+				<div class="row justify-content-center">
+					<div class="form-group">
+						<label for="uname">Username:</label>
+						<input type="text" name="username"  class="form-control mb-2" placeholder="Enter username">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" name="password" class="form-control mb-2" placeholder="Enter password">
+					</div>
+	
+					<div class="row justify-content-center">
+						<button type="submit" class="btn btn-primary btn-dark btn-block mb-4">Sign in</button>
+					</div>
+				</div> 
+			</form:form>
+		</div
+</body>
+</html>

@@ -1,0 +1,28 @@
+POST http://www.bilgehankaya.me:3000/restapi/api/exams/
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiaWxnZSIsImlhdCI6MTYxMzQyMTIwOSwiZXhwIjoxNjEzNzgxMjA5fQ.gRjaq6h63kE5FfFrzCiNsHHL9UPXtP2RSGMHwa1tnV_xgebHBGUCAgNVdgwk7JLAuaD7d6NAZHsDxl6glWmi9g"
+
+{
+  "title": "Softwadasre",
+  "startDate": "2021-02-04 11:00",
+  "finishDate": "2021-02-04 13:00",
+  "questions": [
+    {
+      "number": 1,
+      "point": 50,
+      "content": "How are you today?",
+      "correctChoice": 1,
+      "choices": [
+        {
+          "number": 1,
+          "content": "Fine!"
+        },
+        {
+          "number": 2,
+          "content": "Not Bad!"
+        }
+      ]
+    }
+  ]
+}
+
