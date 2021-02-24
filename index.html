@@ -16,12 +16,44 @@
 </head>
 
 <body>
+    <form:form action="" method="POST" modelAttribute="exam">
+        <div class="container" id="questionDiv">
+            <button onclick="setAttr();" type="submit" class="btn btn-success my-3">Post Exam</button>
 
-    <div class="container" id="questionDiv">
 
-                <button onclick="postExam();" class="btn btn-success my-3">Post Exam</button>
-        <button onclick="createQuestion();" class="btn btn-success my-3">Create Question</button>
+            <!-- div for exam props -->
+            <div class="examProps">
+
+                <!-- exam title input -->
+                <div class="form-group">
+                    <strong>Exam Title</strong>
+                    <form:input id="examTitle" path="exam.title" value="My Exam"
+                        class="form-control form-control-user containsString" />
+                </div>
+
+                <!-- start date input -->
+                <div class="form-group">
+                    <strong>Start Date</strong>
+                    <form:input path="exam.startDate" class="form-control" type="datetime-local"
+                        value="2021-02-25T13:00:00" id="example-datetime-local-input" />
+                </div>
+
+                <!-- finish date input -->
+                <div class="form-group">
+                    <strong>Finish Date</strong>
+                    <form:input path="exam.finishDate" class="form-control" type="datetime-local"
+                        value="2021-02-25T14:00:00" id="example-datetime-local-input" />
+                </div>
+            </div>
+
+
+        </div>
+    </form:form>
+
+    <div class="container" id="newQuestion">
+        <button onclick="createQuestion();" class="btn btn-lg btn-success">Create Question</button>
     </div>
+
     <!-- Create Question Modal -->
 
     <script src="script.js"> </script>
